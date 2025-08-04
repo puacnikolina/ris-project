@@ -29,7 +29,7 @@ The application concept is designed as a **Music store** 💿🎧.
 
 ## EER Diagram
 
-<img width="979" height="657" alt="RIS_ProjectModel" src="https://github.com/user-attachments/assets/eb4a322d-5dc6-41ff-85a0-d4a1c5c13a91" />
+<img width="979" height="657" alt="RIS_ProjectModel" src="https://github.com/user-attachments/assets/a08063dd-0f15-4514-b7b9-254d1ff02102" />
 
 ## Database Setup
 
