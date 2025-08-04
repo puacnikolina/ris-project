@@ -1,0 +1,31 @@
+# Tell GitHub's Linguist how to classify this repository
+language: Java
+
+# Exclude files from language statistics
+vendored:
+  - target/
+  - .metadata/
+  - .settings/
+  - *.class
+  - *.jar
+  - *.war
+  - *.ear
+  - build/
+  - out/
+  - bin/
+  - node_modules/
+  - vendor/
+
+# Document types to ignore
+documentation:
+  - README.md
+  - *.md
+  - docs/
+
+# Generated files to ignore
+generated:
+  - target/
+  - *.class
+  - *.jar
+  - *.war
+  - *.ear 

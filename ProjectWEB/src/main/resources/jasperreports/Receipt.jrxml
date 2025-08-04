@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Receipt" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0cc62970-9d77-4e3d-bbd9-e28085b2746c">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="order.orderDate" class="java.util.Date"/>
+    <field name="order.deliveryDate" class="java.util.Date"/>
+    <field name="order.totalPrice" class="java.lang.Integer"/>
+    <field name="product.name" class="java.lang.String"/>
+    <field name="product.price" class="java.lang.Integer"/>
+    <field name="quantity" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+  		<band height="150" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="24" width="100" height="30" uuid="7491e621-ea82-4645-a275-3e4cbe8ac96f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="112" width="130" height="30" uuid="dbd4e25b-d49f-4823-a2cf-5aa43a5d809c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{order.deliveryDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="82" width="100" height="30" uuid="2d6b3dfe-c9b7-4f5c-8c4d-c26d9037f862"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="82" width="130" height="30" uuid="4e61e23c-b814-4094-9b82-b9415516673e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{order.orderDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="112" width="100" height="30" uuid="e9c16136-3972-40dc-80cd-c43c449256f6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Delivery date:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="340" y="16" width="100" height="30" uuid="ba0db092-eec0-4027-a0da-6fc46fa4282c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Price per item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="16" width="160" height="30" uuid="2768103a-cef8-4264-a3d0-2dc9dfecbecd"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="16" width="100" height="30" uuid="dfd3da78-8424-47f0-8b2c-068e343ec45a"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+  		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="10" width="160" height="30" uuid="b15219b8-d666-44be-883d-b3633f3c5665"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{product.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="10" width="100" height="30" uuid="0faad026-2632-407e-94bc-345e86a0bfe0"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="10" width="100" height="30" uuid="cb7c70cf-7aed-47bc-974e-b7408e4bcc1e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{product.price} + "€"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+	    <band height="0" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="35" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+	  <band height="32" splitType="Stretch">
+	    <staticText>
+	      <reportElement x="240" y="0" width="100" height="30"/>
+	      <textElement textAlignment="Center" verticalAlignment="Middle">
+	        <font size="12" isBold="true" isItalic="true"/>
+	      </textElement>
+	      <text><![CDATA[Total ]]></text>
+	    </staticText>
+	    <textField>
+	      <reportElement x="340" y="0" width="100" height="30"/>
+	      <textElement textAlignment="Center" verticalAlignment="Middle"/>
+	      <textFieldExpression><![CDATA[$F{order.totalPrice} + "€"]]></textFieldExpression>
+	    </textField>
+	  </band>
+	</summary>
+</jasperReport>

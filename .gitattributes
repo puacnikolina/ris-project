@@ -1,2 +1,20 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Make only Java files detectable for language statistics
+*.java linguist-detectable=true
+*.jsp linguist-detectable=true
+
+# Exclude other languages from detection
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.xml linguist-detectable=false
+*.json linguist-detectable=false
+*.properties linguist-detectable=false
+
+# Exclude generated files
+target/ linguist-vendored
+*.class linguist-vendored
+*.jar linguist-vendored
+*.war linguist-vendored
+*.ear linguist-vendored
+.metadata/ linguist-vendored
+.settings/ linguist-vendored 
