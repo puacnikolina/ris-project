@@ -44,6 +44,12 @@ INSERT INTO category (idCategory, name) VALUES
 (2, 'Vinyl'),
 (3, 'Tape');
 
+## Admin Access Setup
+By default, newly registered users are assigned the role "USER".
+To access the admin side of the application, you need to manually update the role of the first registered user to "ADMIN".
+
+UPDATE user SET Role_idRole = 1 WHERE idUser = 1;
+
 ## Notes
 
 - This project currently does **not** include CSS styling or advanced UI design.
